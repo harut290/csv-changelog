@@ -10,7 +10,7 @@
   header { display:flex; gap:12px; align-items:center; margin:0 0 12px; flex-wrap:wrap; }
   h1 { margin:0; font-size:20px; font-weight:700; }
   .controls { margin-left:auto; display:flex; gap:8px; align-items:center; }
-  .search { padding:8px 10px; border:1px solid #ccc; border-radius:999px; min-width:220px; outline:0; }
+  .search { padding:8px 10px; border:1px solid #ccc; border-radius:999px; flex:1; min-width:120px; max-width:100%; outline:0; box-sizing:border-box; }
   .list { display:grid; grid-template-columns:1fr; gap:var(--gap); }
   .card { background:#fff; border:1px solid #e9e9ec; border-radius:var(--radius); box-shadow:0 4px 16px rgba(0,0,0,.06); padding:var(--pad); }
   .date { font-size:12px; color:#666; margin-bottom:6px; }
@@ -34,7 +34,7 @@
   <section id="list" class="list" hidden></section>
   <div id="empty" class="empty" hidden>表示できる更新はありません。</div>
   <div id="more" class="footer" hidden>
-    <button id="moreBtn" class="btn" type="button">もっと見る</button>
+    <button id="moreBtn" class="btn" type="button">続きを見る</button>
   </div>
 </main>
 
@@ -47,7 +47,7 @@
 const CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRQ0vz79yyWOQ6nSsWfWYGT-ILp1NUGBIH4MYzA_8Hl0DFNrquUerJtZtqhqsPE3-5JhiOFekCIA-QZ/pub?gid=1855337934&single=true&output=csv";
 
 // 初期表示件数 / 「もっと見る」増分
-const PAGE_SIZE = 5;
+const PAGE_SIZE = 6;
 
 // キャッシュ避け（都度最新を取りたいとき true）
 const CACHE_BUST = true;
